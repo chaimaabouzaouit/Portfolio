@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaimaa BOUZAOUIT - Chargée de Marketing Opérationnel B2B | Communication & Sales Enablement</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-main: #0c0f10;
+            --bg-surface: #14181a;
+            --bg-card: #1c2225;
+            --accent-bronze: #cda861;
+            --accent-muted: #8c733e;
+            --text-main: #f0f2f3;
+            --text-sub: #9ca3af;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-accent: rgba(205, 168, 97, 0.3);
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --font-head: 'Syne', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(12, 15, 16, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .brand {
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .brand span {
+            color: var(--accent-bronze);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: var(--text-sub);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--text-main);
+        }
+
+        .btn-nav {
+            padding: 0.6rem 1.4rem;
+            border-radius: 50px;
+            background: var(--accent-bronze);
+            color: #0c0f10;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .btn-nav:hover {
+            opacity: 0.9;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 160px 0 100px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 12px;
+            background: rgba(205, 168, 97, 0.1);
+            border: 1px solid var(--border-accent);
+            border-radius: 30px;
+            color: var(--accent-bronze);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .badge-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--accent-bronze);
+            border-radius: 50%;
+        }
+
+        .hero-title {
+            font-family: var(--font-head);
+            font-size: 3.2rem;
+            line-height: 1.1;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero-title em {
+            font-style: normal;
+            color: var(--accent-bronze);
+        }
+
+        .hero-text {
+            color: var(--text-sub);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            max-width: 540px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .hero-image-wrap {
+            position: relative;
+        }
+
+        .hero-image-wrap img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .stat-num {
+            font-family: var(--font-head);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-bronze);
+        }
+
+        .stat-lbl {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        /* SECTIONS GENERAL */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-head {
+            margin-bottom: 3.5rem;
+        }
+
+        .section-tag {
+            color: var(--accent-bronze);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-family: var(--font-head);
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        /* PORTFOLIO GRID */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-accent);
+        }
+
+        .card-img-holder {
+            width: 100%;
+            height: 320px;
+            background: var(--bg-surface);
+            overflow: hidden;
+        }
+
+        .card-img-holder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover .card-img-holder img {
+            transform: scale(1.03);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-cat {
+            font-size: 0.75rem;
+            color: var(--accent-bronze);
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+        }
+
+        .card-title {
+            font-family: var(--font-head);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        .card-desc {
+            font-size: 0.88rem;
+            color: var(--text-sub);
+            margin-bottom: 1.2rem;
+            flex-grow: 1;
+        }
+
+        .card-foot {
+            padding-top: 0.8rem;
+            border-top: 1px solid var(--border-subtle);
+            font-size: 0.8rem;
+            color: #4ade80;
+            font-weight: 500;
+        }
+
+        /* PARCOURS & EXPERTISE */
+        .bg-surface {
+            background-color: var(--bg-surface);
+        }
+
+        .timeline {
+            max-width: 800px;
+        }
+
+        .timeline-block {
+            position: relative;
+            padding-left: 2rem;
+            padding-bottom: 2.5rem;
+            border-left: 1px solid var(--border-subtle);
+        }
+
+        .timeline-block:last-child {
+            padding-bottom: 0;
+            border-left-color: transparent;
+        }
+
+        .timeline-block::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 4px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--accent-bronze);
+        }
+
+        .timeline-date {
+            font-size: 0.8rem;
+            color: var(--accent-bronze);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-title {
+            font-family: var(--font-head);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .timeline-company {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 0.6rem;
+        }
+
+        .timeline-text {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            padding: 1.8rem;
+            border-radius: var(--radius-md);
+        }
+
+        .skill-card h3 {
+            font-family: var(--font-head);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--accent-bronze);
+        }
+
+        .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            padding: 0.3rem 0.7rem;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--border-subtle);
+            text-align: center;
+        }
+
+        .footer-title {
+            font-family: var(--font-head);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-contacts {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: var(--text-sub);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-bronze);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 850px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-menu {
+                display: none;
+            }
+            .hero-title {
+                font-size: 2.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container nav-inner">
+            <a href="#" class="brand">CHAIMAA <span>BOUZAOUIT</span></a>
+            <ul class="nav-menu">
+                <li><a href="#projets">Réalisations</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#competences">Expertise</a></li>
+            </ul>
+            <a href="mailto:chaimaabouzaouit@gmail.com" class="btn-nav">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    Disponible en CDI - Mobile France
+                </div>
+                <h1 class="hero-title">Chargée de marketing opérationnel & <em>communication digitale</em></h1>
+                <p class="hero-text">
+                    Spécialisée dans le secteur industriel et l'économie circulaire. Je conçois des supports de vente, gère la communication multicanale et pilote des initiatives RSE à fort impact commercial.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projets" class="btn-nav" style="padding: 0.8rem 1.8rem; font-size: 0.9rem;">Voir mes travaux</a>
+                    <a href="tel:+33780488769" style="color: var(--text-sub); text-decoration: none; font-size: 0.9rem; margin-left: 1rem;">+33 7 80 48 87 69</a>
+                </div>
+
+                <div class="stats-row">
+                    <div>
+                        <div class="stat-num">+10%</div>
+                        <div class="stat-lbl">Chiffre d'affaires généré</div>
+                    </div>
+                    <div>
+                        <div class="stat-num">+70</div>
+                        <div class="stat-lbl">Supports B2B créés</div>
+                    </div>
+                    <div>
+                        <div class="stat-num">115</div>
+                        <div class="stat-lbl">Participants événement RSE</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-wrap">
+                <img src="Gemini_Generated_Image_.png" alt="Chaimaa Bouzaouit">
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETS / PORTFOLIO -->
+    <section id="projets" class="bg-surface">
+        <div class="container">
+            <div class="section-head">
+                <div class="section-tag">Portfolio</div>
+                <h2 class="section-title">Sélection de Réalisations</h2>
+            </div>
+
+            <div class="portfolio-grid">
+
+                <!-- 1. Ahlstrom FluoroFree -->
+                <article class="card">
+                    <div class="card-img-holder">
+                        <img src="Copie de Copie de Portfolio CB (6).jpeg" alt="Fiche produit Ahlstrom">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Sales Enablement</span>
+                        <h3 class="card-title">Ahlstrom - FluoroFree®</h3>
+                        <p class="card-desc">Création de la fiche produit B2B pour la gamme de papier ingraissable destinée à la restauration rapide.</p>
+                        <div class="card-foot">- Impact : Adoption par 20+ commerciaux EMEA & intégration bibliothèque Showpad</div>
+                    </div>
+                </article>
+
+                <!-- 2. Ahlstrom Cristal Evolution -->
+                <article class="card">
+                    <div class="card-img-holder">
+                        <img src="Cristal  évolution (2) (1) (1) (1) (1).jpg" alt="Affiche Cristal Evolution Ahlstrom">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Affichage & Communication Locale</span>
+                        <h3 class="card-title">Ahlstrom - Cristal Evolution™</h3>
+                        <p class="card-desc">Conception d'une affiche grand format pour panneau publicitaire valorisant l'alternative papier écoresponsable Made in Dordogne.</p>
+                        <div class="card-foot">- Impact : Sensibilisation locale & valorisation du savoir-faire industriel territorial</div>
+                    </div>
+                </article>
+
+                <!-- 3. Chiffres Clés Indra -->
+                <article class="card">
+                    <div class="card-img-holder">
+                        <img src="Copie de Copie de Portfolio CB (5).jpeg" alt="Affiche Chiffres Clés Indra">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Infographie Corporate</span>
+                        <h3 class="card-title">Indra & Re-source - Bilan Filière</h3>
+                        <p class="card-desc">Affiche synthétisant les données clés du pôle ingénierie, de la formation et des performances de dépollution.</p>
+                        <div class="card-foot">- Impact : Valorisation institutionnelle lors de salons professionnels majeurs</div>
+                    </div>
+                </article>
+
+                <!-- 4. Re-source VE -->
+                <article class="card">
+                    <div class="card-img-holder">
+                        <img src="Copie de Copie de Portfolio CB (9).jpeg" alt="Fiche technique Véhicule Électrique">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Print & Fiche Technique</span>
+                        <h3 class="card-title">Re-source - Véhicule Électrique</h3>
+                        <p class="card-desc">Mise en page des équipements, de la réglementation VHE et des kits de sécurité pour le réseau VHU.</p>
+                        <div class="card-foot">- Impact : Standardisation des process de sécurité pour 350+ centres partenaires</div>
+                    </div>
+                </article>
+
+                <!-- 5. Accompagnement VHU -->
+                <article class="card">
+                    <div class="card-img-holder">
+                        <img src="Copie de Copie de Portfolio CB (7).jpeg" alt="Infographie parcours Re-source">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Design d'Information</span>
+                        <h3 class="card-title">Re-source - Parcours VHU</h3>
+                        <p class="card-desc">Conception d'une infographie décrivant les étapes d'accompagnement des centres de traitement agréés.</p>
+                        <div class="card-foot">- Impact : Réduction du cycle de vente et clarification immédiate de l'offre</div>
+                    </div>
+                </article>
+
+                <!-- 6. Offre Promo Re-source -->
+                <article class="card">
+                    <div class="card-img-holder">
+                        <img src="Copie de Copie de Portfolio CB (3).jpeg" alt="Flyer Offre Promo">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Marketing Opérationnel</span>
+                        <h3 class="card-title">Re-source - Matériel & Cisailles</h3>
+                        <p class="card-desc">Support promotionnel axé sur les stations de dépollution et équipements de découpe hydraulique.</p>
+                        <div class="card-foot">- Impact : Dynamisation des ventes sur la gamme outillage de démantèlement</div>
+                    </div>
+                </article>
+
+                <!-- 7. Gamme Dépollution -->
+                <article class="card">
+                    <div class="card-img-holder">
+                        <img src="Copie de Copie de Portfolio CB (2).jpeg" alt="Catalogue Dépollution">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Catalogue Produit</span>
+                        <h3 class="card-title">Re-source - Gamme Dépollution</h3>
+                        <p class="card-desc">Mise en page de la gamme d'équipements fixes, mobiles et accessoires de neutralisation d'airbags.</p>
+                        <div class="card-foot">- Impact : Support de référence utilisé quotidiennement par la force de vente</div>
+                    </div>
+                </article>
+
+                <!-- 8. Bouchon Stop Oil -->
+                <article class="card">
+                    <div class="card-img-holder">
+                        <img src="IMG_4530.jpeg" alt="Fiche Stop Oil">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Lancement Produit</span>
+                        <h3 class="card-title">Re-source - Bouchon Stop Oil</h3>
+                        <p class="card-desc">Fiche de présentation des avantages techniques et de la mise en œuvre en atelier de démantèlement.</p>
+
+                        <div class="card-foot">- Impact : Facilitation des démonstrations techniques auprès des opérateurs atelier</div>
+                    </div>
+                </article>
+
+                <!-- 9. Manutention & Levage -->
+                <article class="card">
+                    <div class="card-img-holder">
+                        <img src="Copie de Copie de Portfolio CB (1).jpeg" alt="Fiche Manutention">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Catalogue Technique</span>
+                        <h3 class="card-title">Re-source - Levage & Basculeurs</h3>
+                        <p class="card-desc">Présentation technique synthétique des ponts et portiques d'outillage pour le recyclage automobile.</p>
+                        <div class="card-foot">- Impact : Gain de temps significatif lors des chiffrages sur-mesure</div>
+                    </div>
+                </article>
+
+                <!-- 10. Incubateur BBS -->
+                <article class="card">
+                    <div class="card-img-holder">
+                        <img src="Copie de Copie de Portfolio CB (8).jpeg" alt="Flyer Incubateur BBS">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Communication Institutionnelle</span>
+                        <h3 class="card-title">Incubateur BBS</h3>
+                        <p class="card-desc">Création du flyer de présentation pour le programme d'accompagnement entrepreneurial.</p>
+                        <div class="card-foot">- Impact : Recrutement de la nouvelle promotion de porteurs de projets</div>
+                    </div>
+                </article>
+
+                <!-- 11. Nails by Chaimaa -->
+                <article class="card">
+                    <div class="card-img-holder">
+                        <img src="Gemini_Generated_Image_erma9merma9merma.png" alt="Nails by Chaimaa">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Branding & Social Media</span>
+                        <h3 class="card-title">Nails by Chaimaa</h3>
+                        <p class="card-desc">Création intégrale de la charte visuelle, grille tarifaire et stratégie de contenu réseaux sociaux.</p>
+                        <div class="card-foot">- Impact : Acquisition de +577 abonnés ciblés et réservation locale optimisée</div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PARCOURS -->
+    <section id="parcours">
+        <div class="container">
+            <div class="section-head">
+                <div class="section-tag">Expérience</div>
+                <h2 class="section-title">Parcours Professionnel</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-block">
+                    <div class="timeline-date">02/2025 - 01/2026</div>
+                    <h3 class="timeline-role">Consultante en marketing digital & développement commercial</h3>
+                    <div class="timeline-company">Somaritours - Transport touristique haut de gamme</div>
+                    <p class="timeline-text">Développement de la stratégie B2B ciblée hôtels et agences, création d'outils commerciaux et partenariats grands comptes.</p>
+                </div>
+
+                <div class="timeline-block">
+                    <div class="timeline-date">03/2023 - 04/2024</div>
+                    <h3 class="timeline-role">Chargée de Marketing & Communication (Alternance)</h3>
+                    <div class="timeline-company">Ahlstrom Specialties (Groupe international)</div>
+                    <p class="timeline-text">Gestion de l'application Showpad, conception de +50 fiches produits/brochures, coordination d'événements RSE et appui à l'équipe commerciale EMEA (20 p.).</p>
+                </div>
+
+                <div class="timeline-block">
+                    <div class="timeline-date">06/2022 - 12/2022</div>
+                    <h3 class="timeline-role">Chargée de Marketing Opérationnel (Stage)</h3>
+                    <div class="timeline-company">Indra Automobile Recycling</div>
+                    <p class="timeline-text">Valorisation des solutions d'économie circulaire VHU, rédaction de newsletters B2B, création de supports Print/Catalogues et gestion LinkedIn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTISE & COMPETENCES -->
+    <section id="competences" class="bg-surface">
+        <div class="container">
+            <div class="section-head">
+                <div class="section-tag">Savoir-faire</div>
+                <h2 class="section-title">Compétences & Outils</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Marketing B2B</h3>
+                    <div class="tags-list">
+                        <span class="tag">Sales Enablement</span>
+                        <span class="tag">Stratégie de Contenu</span>
+                        <span class="tag">Communication RSE</span>
+                        <span class="tag">Emailing & CRM</span>
+                        <span class="tag">Analyse de Performance</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Création & Design</h3>
+                    <div class="tags-list">
+                        <span class="tag">Suite Adobe</span>
+                        <span class="tag">Canva</span>
+                        <span class="tag">Édition & Print</span>
+                        <span class="tag">Montage vidéo (CapCut)</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Outils Métier</h3>
+                    <div class="tags-list">
+                        <span class="tag">Showpad</span>
+                        <span class="tag">CRM</span>
+                        <span class="tag">ERP</span>
+                        <span class="tag">Outils IA / ChatGPT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <h2 class="footer-title">Discutons de votre projet</h2>
+            <p style="color: var(--text-sub); max-width: 500px; margin: 0 auto;">Disponible immédiatement pour un poste en CDI (Permis B, mobile sur toute la France).</p>
+
+            <div class="footer-contacts">
+                <a href="mailto:chaimaabouzaouit@gmail.com" class="footer-link">chaimaabouzaouit@gmail.com</a>
+                <a href="tel:+33780488769" class="footer-link">+33 7 80 48 87 69</a>
+            </div>
+
+            <a href="mailto:chaimaabouzaouit@gmail.com" class="btn-nav" style="padding: 0.8rem 2rem; font-size: 0.9rem;">Me contacter</a>
+
+            <p class="copyright">© 2026 Chaimaa BOUZAOUIT. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
